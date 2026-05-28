@@ -13,7 +13,7 @@ public class rabbit {
 
         }
     public rabbit() {
-
+        this.shape = shape;
     }
 
     public rabbit(String shape) {
@@ -32,6 +32,7 @@ public class rabbit {
         return xPos;
     }
 
+
     public void setxPos(int xPos) {
         this.xPos = xPos;
     }
@@ -42,6 +43,24 @@ public class rabbit {
 
     public void setyPos(int yPos) {
         this.yPos = yPos;
+    }
+
+    public void setLocation(int xPos, int yPos){
+        this.xPos = xPos;
+        this.yPos = yPos;
+    }
+// 토끼의 모양, 위치 출력 메소드
+    public void printInfo(){
+        System.out.printf("%s 모양의 토끼는 (%d, %d) 좌표에 위치하고 있다.\n", shape, xPos, yPos);
+    }
+
+    //    x축으로 10씩 오른쪽으로 이동하는 메소드
+    public void moverigthTen(){
+        xPos += 10;
+    }
+    //    x축으로 10씩 왼쪽으로 이동하는 메소드
+    public void moveleftTen() {
+        xPos -= 10;
     }
 }
 
